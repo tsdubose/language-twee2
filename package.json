@@ -1,0 +1,16 @@
+{
+  "name": "language-twee2",
+  "version": "0.0.0",
+  "description": "Twee2 language support in Atom",
+  "main": "index.js",
+  "engines": {
+    "atom": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bvautour/language-twee2"
+  },
+  "dependencies": {},
+  "author": "Brad Vautour",
+  "license": "MIT"
+}

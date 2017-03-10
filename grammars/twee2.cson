@@ -1,0 +1,36 @@
+'scopeName': 'source.twee2'
+'name': 'Twee2'
+'fileTypes': ['tw2']
+
+'patterns': [
+    {
+      # Numbers
+      'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+      'name': 'constant.numeric.twee2'
+    },
+    {
+        # Functions
+      'match': '\\b(function)\\s+(\\w+)\\s*\\(.*\\)'
+      'captures':
+          '1':
+              'name': 'keyword.control.twee2'
+          '2':
+              'name': 'entity.name.function.twee2'
+      'name': 'meta.function.twee2'
+    },
+    {
+      #Variables
+    },
+    {
+      # Single Quotes
+      'begin': '\''
+      'end': '\''
+      'name': 'string.quoted.single.twee2'
+    },
+    {
+      #Double Quotes
+      'begin': '\"'
+      'end': '\"'
+      'name': 'string.quoted.double.twee2'
+    }
+]
