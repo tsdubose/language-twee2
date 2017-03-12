@@ -1,0 +1,53 @@
+'.source.twee2':
+  'Twee2 Quick Start':
+    'prefix': 'quickstart'
+    'body': """
+      :: StoryTitle
+        $1
+      :: Start
+        **$1**
+        [[PLAY->firstPassage]]
+      :: firstPassage
+        It was a dark and stormy night...
+      :: StoryIncludes
+      includes/passages.tw2
+      includes/config.tw2
+      includes/style.tw2
+      includes/script.tw2
+    """
+  'Twee2 Build':
+    'prefix': 'Build'
+    'body': 'twee2 build index.tw2 index.html'
+  'StoryTitle':
+    'prefix': 'Story'
+    'body': ':: StoryTitle'
+  'StoryTitle alt':
+    'prefix': 'Title'
+    'body': ':: StoryTitle'
+  'Start':
+    'prefix': 'Start'
+    'body': ':: Start'
+  'StoryIncludes':
+    'prefix': 'Includes'
+    'body': ':: StoryIncludes'
+  'Passage':
+    'prefix': 'Passage'
+    'body': ':: $1'
+  'Passage Complete':
+    'prefix': 'Passage Complete'
+    'body': ':: $1 [$2] <$3,$4>'
+  'CSS Passage':
+    'prefix': 'CSS'
+    'body': ':: CSS [stylesheet]'
+  'SCSS Passage':
+    'prefix': 'SCSS'
+    'body': ':: SCSS [scss stylesheet]'
+  'SASS Passage':
+    'prefix': 'SASS'
+    'body': ':: SASS [sass stylesheet]'
+  'JS Passage':
+    'prefix': 'JS'
+    'body': ':: JS [script]'
+  'HAML Passage':
+    'prefix': 'HAML'
+    'body': ':: HAML [haml]'
