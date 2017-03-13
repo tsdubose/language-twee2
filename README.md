@@ -44,6 +44,6 @@ Contributions are greatly appreciated. Please fork this repository and open a pu
 * [Twine Docs](https://twinery.org/wiki/)
 
 ## <a id="license"></a>License
-`language-twee2` is released under the [MIT license](license.md).
+`language-twee2` is released under the [MIT license](LICENSE.md).
 
 ---
