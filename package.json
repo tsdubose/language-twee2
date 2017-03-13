@@ -1,6 +1,6 @@
 {
   "name": "language-twee2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Twee2 language support in Atom",
   "engines": {
     "atom": "*"
