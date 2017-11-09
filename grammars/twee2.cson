@@ -220,6 +220,23 @@
 
       },
       {"include": "text.html.basic"},
+      ## SugarCube script blocks. Needs to come first to avoid conflict with SC macros.
+      {
+        'name': 'meta.sugarcube.scripts.twee2'
+        'begin': '(<<)(script)(>>)'
+        'beginCaptures':
+          '1': 'name': 'punctuation.separator.twee2'
+          '2': 'name': 'keyword.control.twee2'
+          '3': 'name': 'punctuation.separator.twee2'
+        'end': '(<<\\/)(script)(>>)'
+        'endCaptures':
+          '1': 'name': 'punctuation.separator.twee2'
+          '2': 'name': 'keyword.control.twee2'
+          '3': 'name': 'punctuation.separator.twee2'
+        'patterns': [
+          { "include": "source.js"}
+        ]
+      }
       ## Harlowe Macros
       {
         'name': 'meta.harlowe.macros.twee2'
@@ -312,7 +329,103 @@
           {
             "match": "\\b(Infinity|NaN|undefined)\\b",
             "name": "constant.language.js"
+          },
+          {
+            "match": "(\\=)"
+            "name": "constant.language.operator.js"
           }
+        ]
+      },
+      ## SugarCube Macros
+      {
+        'name': 'meta.sugarcube.macros.twee2'
+        'begin': '(<<)(\\/?)'
+        'beginCaptures':
+          '1': 'name': 'punctuation.separator.twee2'
+          '2': 'name': 'punctuation.separator.twee2'
+        'end': '(>>)'
+        'endCaptures':
+          '1': 'name': 'punctuation.separator.twee2'
+        'patterns': [
+            # Variables
+            {
+              "match": "\\$\\b([A-Za-z_][A-Za-z0-9_]*)\\b",
+              "name": "variable.twee2"
+            },
+            {
+              "match": "_([A-Za-z_][A-Za-z0-9_]*)\\b",
+              "name": "variable.twee2"
+            },
+            # Single Quotes
+            {
+              "match": "('[^']*')",
+              "name": "string.quoted.single.twee2"
+            },
+            # Double Quotes
+            {
+              "match": "(\"[^\"]*\")",
+              "name": "string.quoted.double.twee2"
+            },
+            #constants
+            {
+              "match": "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
+              "name": "constant.numeric.js"
+            },
+            #true
+            {
+              "match": "\\btrue\\b",
+              "name": "constant.twee2"
+            },
+            #false
+            {
+              "match": "\\bfalse\\b",
+              "name": "constant.language.boolean.false.js"
+            },
+            #null
+            {
+              "match": "\\bnull\\b",
+              "name": "constant.language.null.js"
+            },
+            #NaN/undefined
+            {
+              "match": "\\b(Infinity|NaN|undefined)\\b",
+              "name": "constant.language.js"
+            },
+            # Operators
+            {
+              'match': '(%=|\\+=|-=|\\*=|(?<!\\()/=|\\sto\\s)'
+              'name': 'keyword.operator.twee2'
+            },
+            ## Control keywords (for themes that style these)
+            {
+              'match': '(!==|!=|<=|>=|===|==|<|>|\\beq\\b|\\bis\\b|\\bneq\\b|\\bisnot\\b|\\bgte?\\b|\\blte?\\b|\\bnot\\b|\\bdef\\b|\\bndef\\b)'
+              'name': 'keyword.operator.twee2'
+            },
+            {
+              'match': '(&&|!!|!|\\|\\||\\band\\b|\\bor\\b)'
+              'name': 'keyword.operator.twee2'
+            },
+            {
+              'match': '[A-Za-z]+'
+              'name': 'keyword.control.twee2'
+            },
+            ## Passage Links
+            {
+              'name': 'meta.markup.underline.link.twee2'
+              "begin": "(\\[\\[)"
+              "beginCaptures":
+                "1": "name": "comment.block.punctuation.definition.link.begin.twee2"
+              "end": "(\\]\\])"
+              "endCaptures":
+                "1": "name": "comment.block.punctuation.definition.link.end.twee2"
+              "contentName": "entity.name.function.link.twee2"
+              "patterns": [
+                "match": "(\\b\\|\\b)([^\\]]*)"
+                "captures":
+                  "1": "name": "comment.block.punctuation.definition.link.divider.twee2"
+                  "2": "name": "entity.other.attribute-name.link.twee2"
+              ]
+            }
         ]
       },
       ## Variables
