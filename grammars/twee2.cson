@@ -236,7 +236,7 @@
         'patterns': [
           { "include": "source.js"}
         ]
-      }
+      },
       ## Harlowe Macros
       {
         'name': 'meta.harlowe.macros.twee2'
