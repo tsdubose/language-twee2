@@ -1,6 +1,6 @@
 'scopeName': 'source.twee2'
 'name': 'Twee2'
-'fileTypes': ['tw2']
+'fileTypes': ['tw2', 'tw']
 'patterns': [
   #### Twee2 Patterns
   ## CSS Embedded Passages
