@@ -220,6 +220,23 @@
 
       },
       {"include": "text.html.basic"},
+      {
+        "name": "comment.block.twee2"
+        "begin": "/\\*"
+        "beginCaptures":
+          "0": "name": "punctuation.definition.comment.begin.twee2"
+        "end": "\\*/"
+        "endCaptures":
+          "0": "name": "punctuation.definition.comment.end.twee2"
+      },
+      {
+        'begin': '//'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.js'
+        'end': '$'
+        'name': 'comment.line.double-slash.js'
+      },
       ## SugarCube script blocks. Needs to come first to avoid conflict with SC macros.
       {
         'name': 'meta.sugarcube.scripts.twee2'
