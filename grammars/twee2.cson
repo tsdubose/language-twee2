@@ -447,7 +447,7 @@
       },
       ## Variables
       {
-        "match": "\\$\\b([A-Za-z_][A-Za-z0-9_]*)\\b",
+        "match": "(\\$|_)([A-Za-z_][A-Za-z0-9_]*)\\b",
         "name": "variable.twee2"
       },
       ## Passage Links
